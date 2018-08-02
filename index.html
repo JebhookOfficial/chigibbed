@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Chigibbed</title> 
+
+    <script type="text/javascript">
+
+      window.onload = function()
+      {
+	  yeats("hero.mp3");
+      }
+
+    </script>
+    
   </head>
-  
   <body>
+
 
     <div id="main-text">
       <header>
@@ -17,23 +28,29 @@
 	Shoutout to my homie Seth Klarman 
       </p>  
       <p>
-	<a href="https://www.reddit.com/u/foodisgood70"> Upvote me on Reddit! </a>
-      </p>
-      
+	<a href="https://www.reddit.com/u/foodisgood70"> Upvote me on Reddit!</a>
+      </p> 
     </div>
     
-    <img src="bryce.gif" alt="bryce-01" id="bryce-01">
-    <img src="bryce.gif" alt="bryce-01" id="bryce-02">
-    <img src="yum.png" alt="Delicious!!" id="gamer-fuel">
+    <img src="bryce.gif" alt="bryce-01" id="bryce-01" onclick="yeats('nice.mp3')">
+    <img src="bryce.gif" alt="bryce-02" id="bryce-02" onclick="yeats('nice.mp3')">
+    <img src="yum.png" alt="Delicious!!" id="gamer-fuel" onclick="yeats('remarks.mp3')">
       
+    
+  <script>
 
-    <audio autoplay loop>
-      <source src='hero.mp3' type='audio/mpeg'>
-	You suck on ice
-    </audio>
+    function yeats(file)
+    {
+	var sound = new Audio(file);
+	sound.play();
+    }
+    
+  </script>
     
   </body>
 
+
+  
   <style>
     
     #main-text
@@ -86,6 +103,6 @@
     {
 	color: white;
     }
-    
+
   </style>
 </html>
